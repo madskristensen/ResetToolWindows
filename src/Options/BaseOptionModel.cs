@@ -1,16 +1,16 @@
-﻿using System;
+﻿using Microsoft;
+using Microsoft.VisualStudio.Settings;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.Shell.Settings;
+using Microsoft.VisualStudio.Threading;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
-using Microsoft;
-using Microsoft.VisualStudio.Settings;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Shell.Settings;
-using Microsoft.VisualStudio.Threading;
 using Task = System.Threading.Tasks.Task;
 
 namespace ResetToolWindows
@@ -47,7 +47,10 @@ namespace ResetToolWindows
         /// <summary>
         /// Get the singleton instance of the options. Thread safe.
         /// </summary>
-        public static Task<T> GetLiveInstanceAsync() => _liveModel.GetValueAsync();
+        public static Task<T> GetLiveInstanceAsync()
+        {
+            return _liveModel.GetValueAsync();
+        }
 
         /// <summary>
         /// Creates a new instance of the options class and loads the values from the store. For internal use only
