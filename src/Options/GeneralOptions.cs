@@ -17,7 +17,7 @@ namespace CodeCleanupOnSave
         public bool ShowErrorList { get; set; } = true;
 
         [Category("Visible Tool Windows")]
-        [DisplayName("OutputWindow")]
+        [DisplayName("Output Window")]
         [Description("Docks the OutputWindow if it was already open.")]
         [DefaultValue(false)]
         public bool ShowOutputWindow { get; set; }
