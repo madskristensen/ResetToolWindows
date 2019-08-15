@@ -1,5 +1,4 @@
-﻿using CodeCleanupOnSave;
-using EnvDTE;
+﻿using EnvDTE;
 using EnvDTE80;
 using Microsoft;
 using Microsoft.VisualStudio.Shell;
