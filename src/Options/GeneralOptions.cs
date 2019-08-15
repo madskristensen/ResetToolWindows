@@ -13,8 +13,8 @@ namespace ResetToolWindows
         [Category("Visible Tool Windows")]
         [DisplayName("Error List")]
         [Description("Docks the Error List if it was already open.")]
-        [DefaultValue(true)]
-        public bool ShowErrorList { get; set; } = true;
+        [DefaultValue(false)]
+        public bool ShowErrorList { get; set; }
 
         [Category("Visible Tool Windows")]
         [DisplayName("Output Window")]

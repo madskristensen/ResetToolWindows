@@ -22,6 +22,8 @@ Choose between:
 * Task List
 * Toolbox
 
+The fewer tool windows docked on startup, the better the performance. So, if all tool windows were un-docked (collapsed), you got zero negative performance impact from tool windows.
+
 ![Options](art/options.png)
 
 ## License
