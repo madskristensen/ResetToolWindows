@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/fb4rkem5vayl1u5q?svg=true)](https://ci.appveyor.com/project/madskristensen/resettoolwindows)
 
 Download the extension at the
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.CodeCleanupOnSave)
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ResetToolWindow)
 or try the
 [CI build](http://vsixgallery.com/extension/MadsKristensen.ResetToolWindow/).
 

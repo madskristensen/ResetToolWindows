@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell;
 
-namespace CodeCleanupOnSave
+namespace ResetToolWindows
 {
     /// <summary>
     /// A base class for a DialogPage to show in Tools -> Options.

@@ -1,4 +1,4 @@
-﻿namespace CodeCleanupOnSave
+﻿namespace ResetToolWindows
 {
     /// <summary>
     /// A provider for custom <see cref="DialogPage" /> implementations.

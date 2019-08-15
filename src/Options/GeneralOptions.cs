@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CodeCleanupOnSave
+namespace ResetToolWindows
 {
     internal class GeneralOptions : BaseOptionModel<GeneralOptions>
     {
