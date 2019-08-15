@@ -45,6 +45,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DockHelpers.cs" />
     <Compile Include="Options\BaseOptionModel.cs" />
     <Compile Include="Options\BaseOptionPage.cs">
       <SubType>Component</SubType>
