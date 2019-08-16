@@ -4,6 +4,12 @@ namespace ResetToolWindows
 {
     internal class GeneralOptions : BaseOptionModel<GeneralOptions>
     {
+        [Category("General")]
+        [DisplayName("Enable Automatic Reset")]
+        [Description("Determines whether or not to auto-hide any tool windows and dock the selected ones.")]
+        [DefaultValue(true)]
+        public bool EnableAutoHide { get; set; } = true;
+
         [Category("Visible Tool Windows")]
         [DisplayName("Command Window")]
         [Description("Docks the Command Window if it was already open.")]

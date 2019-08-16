@@ -20,8 +20,11 @@ namespace ResetToolWindows
 
             try
             {
-                var dte = GetService(typeof(DTE)) as DTE2;
-                DockHelpers.DockToolWindows(dte);
+                if (GeneralOptions.Instance.EnableAutoHide)
+                {
+                    var dte = GetService(typeof(DTE)) as DTE2;
+                    DockHelpers.DockToolWindows(dte);
+                }
             }
             catch (Exception ex)
             {
