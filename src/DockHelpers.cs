@@ -27,9 +27,9 @@ namespace ResetToolWindows
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (shouldDock && windowToDock.Visible)
+            if (shouldDock)
             {
-                // This docks the windows to their last docked location
+                // This docks a window to its last docked location
                 windowToDock.IsFloating = false;
             }
         }
