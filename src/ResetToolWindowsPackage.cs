@@ -9,7 +9,7 @@ namespace ResetToolWindows
 {
     [InstalledProductRegistration(Vsix.Name, Vsix.Description, Vsix.Version)]
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [ProvideAutoLoad(UICONTEXT.ShellInitialized_string, PackageAutoLoadFlags.BackgroundLoad)]
+    [ProvideAutoLoad(UICONTEXT.NoSolution_string, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideOptionPage(typeof(OptionsProvider.GeneralOptions), "Environment\\Startup", "Reset Tool Windows", 0, 0, true)]
     [ProvideProfile(typeof(OptionsProvider.GeneralOptions), "Environment\\Startup", "Reset Tool Windows", 0, 0, true)]
     [Guid("f2156abf-b775-442c-ab74-92c77551c474")]
@@ -29,7 +29,7 @@ namespace ResetToolWindows
             }
             catch (Exception ex)
             {
-                ex.LogAsync().ConfigureAwait(false);
+                ex.LogAsync().FireAndForget();
             }
 
             return base.QueryClose(out canClose);
