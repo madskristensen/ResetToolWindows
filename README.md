@@ -22,7 +22,10 @@ Choose between:
 * Task List
 * Toolbox
 
+Additionally, if there is another window or two you really want to stay visible then you can accept the potential performance hit and use the custom Window Captions List to specify these.
+
 The fewer tool windows docked on startup, the better the performance. So, if all tool windows were un-docked (collapsed), you got zero negative performance impact from tool windows.
+
 
 ![Options](art/options.png)
 

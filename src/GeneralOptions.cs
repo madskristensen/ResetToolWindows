@@ -33,7 +33,7 @@ namespace ResetToolWindows
 
         [Category("Visible Tool Windows")]
         [DisplayName("Output Window")]
-        [Description("Docks the OutputWindow if it was already open.")]
+        [Description("Docks the Output Window if it was already open.")]
         [DefaultValue(false)]
         public bool ShowOutputWindow { get; set; }
 
@@ -54,5 +54,11 @@ namespace ResetToolWindows
         [Description("Docks the Task List if it was already open.")]
         [DefaultValue(false)]
         public bool ShowTaskList { get; set; }
+
+        [Category("Visible Additional Windows")]
+        [DisplayName("Window Captions List")]
+        [Description("Docks the listed windows, separated by semi-colon, if they were already open")]
+        [DefaultValue("")]
+        public string CustomWindowCaptionList { get; set; }
     }
 }

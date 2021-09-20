@@ -1,6 +1,7 @@
 ﻿using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
+using System.Linq;
 
 namespace ResetToolWindows
 {
@@ -12,15 +13,26 @@ namespace ResetToolWindows
 
             dte.ExecuteCommand("Window.AutoHideAll");
 
-            ToolWindows windows = dte.ToolWindows;
+            ToolWindows toolWindows = dte.ToolWindows;            
             GeneralOptions options = GeneralOptions.Instance;
+            
+            Dock(toolWindows.CommandWindow.Parent, options.ShowCommandWindow);
+            Dock(toolWindows.ErrorList.Parent, options.ShowErrorList);
+            Dock(toolWindows.OutputWindow.Parent, options.ShowOutputWindow);
+            Dock(toolWindows.SolutionExplorer.Parent, options.ShowSolutionExplorer);
+            Dock(toolWindows.TaskList.Parent, options.ShowTaskList);
+            Dock(toolWindows.ToolBox.Parent, options.ShowToolbox);
 
-            Dock(windows.CommandWindow.Parent, options.ShowCommandWindow);
-            Dock(windows.ErrorList.Parent, options.ShowErrorList);
-            Dock(windows.OutputWindow.Parent, options.ShowOutputWindow);
-            Dock(windows.SolutionExplorer.Parent, options.ShowSolutionExplorer);
-            Dock(windows.TaskList.Parent, options.ShowTaskList);
-            Dock(windows.ToolBox.Parent, options.ShowToolbox);
+            var customWindowCaptions = options.CustomWindowCaptionList.Split(';').ToHashSet();
+
+            Windows windows = dte.Windows;
+            foreach (Window window in windows)
+            {
+                if (customWindowCaptions.Contains(window.Caption))
+                {
+                    Dock(window, true);
+                }
+            }
         }
 
         private static void Dock(Window windowToDock, bool shouldDock)
